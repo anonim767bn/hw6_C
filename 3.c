@@ -4,10 +4,11 @@ int getFibonacci(int n) {
     int previous= 0;
     int current = 1;
     int temp;
+    //объявляем переменные, чтобы хранить предыдущее и текущее число,а также временную переменную
     for (int i = 2; i <= n; i++){
-        temp = previous + current;
-        previous = current;
-        current = temp;
+        temp = previous + current;//во временную переменную помещаем сумму предыдущего и предПредидущего
+        previous = current;//теперь предыдущая переменная принимает значение текущей
+        current = temp;// текущая переменная принимает значение временной
     }
     return current;
 }
@@ -15,10 +16,12 @@ int getFibonacci(int n) {
 int main () {
     int n;
     while (1)
+    //делаем бесконечный цикл, чтобы не запускать код повторно вручную (остановить можно введя 0)
     {
         scanf("%d", &n);
         if (n == 0) {printf("0\n"); break;}
         printf("%d\n", getFibonacci(n));
+        //вызываем в принте функцию getFibonacci, передаем ей введеное число, и выводим то, что она возвращает
     }
     
 }
