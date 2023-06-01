@@ -2,7 +2,7 @@
 
 int sumDigits(int * num){
     int sum=0;
-    while (num != 0)
+    while (*num != 0)
     {
         sum+=*num%10;
         *num /=10;
@@ -12,10 +12,15 @@ int sumDigits(int * num){
 
 int main () {
     int vvod = 1;
-    while (vvod != 0)
+    while (1)
     {
         scanf("%d", &vvod);
+        if(vvod == 0){
+            printf("0\n");
+            break;
+        }
         printf("%d\n", sumDigits(&vvod));
+        
     }
     
 }
