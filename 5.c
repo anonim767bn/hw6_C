@@ -18,5 +18,6 @@ int main() {
         }
         printf("%d\n", ispolnitel(n));
     }
+    
     return 0;
 }
